@@ -16,6 +16,7 @@ jobs:
         run: npm install
       - name: Test
         run: |
-          EXITCODE=./node_modules/elm-test/bin/elm-test
+          ./node_modules/elm-test/bin/elm-test
+          EXITCODE=$?
           test $EXITCODE -eq 2 && exit 0
           exit 1
