@@ -20,3 +20,4 @@ jobs:
           EXITCODE=$?
           test $EXITCODE -eq 2 && exit 0
           exit 1
+        shell: bash {0}
