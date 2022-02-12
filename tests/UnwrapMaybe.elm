@@ -1,11 +1,12 @@
-module UnwrapTests exposing (tests)
+module UnwrapMaybe exposing (suite)
 
 import Expect
-import Test exposing (describe, test)
+import Test exposing (Test, describe, test)
 import Unwrap
 
 
-tests =
+suite : Test
+suite =
     describe "Unwrap"
         [ test "maybe" <|
             \_ ->
