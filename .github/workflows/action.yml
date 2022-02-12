@@ -17,5 +17,5 @@ jobs:
       - name: Test
         run: |
           EXITCODE=./node_modules/elm-test/bin/elm-test
-          test EXITCODE -eq 2 && exit 0
+          test $EXITCODE -eq 2 && exit 0
           exit 1
