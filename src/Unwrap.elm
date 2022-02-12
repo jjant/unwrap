@@ -16,7 +16,7 @@ maybe ma =
             a
 
         Nothing ->
-            maybe ma
+            boom1 ()
 
 
 {-| Unwrap if it's an Ok or crash.
@@ -28,4 +28,16 @@ result ra =
             a
 
         Err _ ->
-            result ra
+            boom1 ()
+
+
+{-| No chance the compiler ever does TCO for mutually recursive functions so this should be fine.
+-}
+boom1 : a -> b
+boom1 _ =
+    boom2 ()
+
+
+boom2 : a -> b
+boom2 _ =
+    boom1 ()
