@@ -3,7 +3,7 @@
     "name": "jjant/unwrap",
     "summary": "Unwrap or crash",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "exposed-modules": [
         "Unwrap"
     ],
@@ -13,8 +13,5 @@
     },
     "test-dependencies": {
         "elm-explorations/test": "1.2.2 <= v < 2.0.0"
-    },
-    "source-directories": [
-        "src"
-    ]
+    }
 }
